@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('star.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  scroll-behavior: smooth;
+  padding-top: 100px; 
+}
+
+nav{
+  text-align: center;
+  background: rgba(20, 15, 35, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  display: inline-block;
+  background: rgba(90, 70, 200, 0.2);
+  color: #cfcfff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin: 8px;
+  font-weight: bold;
+  border: 2px solid rgba(150, 100, 255, 0.6);
+  box-shadow: 0 0 12px rgba(120, 0, 255, 0.3);
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: rgba(140, 100, 255, 0.3);
+  box-shadow: 0 0 18px rgba(160, 100, 255, 0.6);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 95%;
+  margin-bottom: 40px;
+  overflow-x:auto;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: #d8e3ff;
+  background: linear-gradient(135deg, #1e90ff, #3a6cf0);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.4);
+}
+
+.buttons a:hover {
+  background: linear-gradient(135deg, #3a6cf0, #1e90ff);
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.7);
+}
+
+.planet{
+  padding: 30px; 
+  margin: 60px auto; 
+  max-width: 750px;
+  background: rgba(15, 10, 30, 0.7);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(90, 0, 180, 0.5);
+  border-radius: 20px;
+  color: #e8e8ff;
+  box-shadow: 0 0 25px rgba(120, 0, 255, 0.4);
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.planet:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(150, 100, 255, 0.7);
+}
+
+.planet h1 {
+  font-family: 'Audiowide', sans-serif;
+  font-size: 2.3em;
+  color: #a68cff;
+  text-shadow: 0 0 15px #a68cff, 0 0 30px #6b4eff;
+}
+
+.planet p {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #dcdcff;
+  margin-top: 15px;
+}
+
+.planet img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #7d6bff;
+  box-shadow: 0 0 20px #7d6bff;
+  margin-bottom: 20px;
+}
