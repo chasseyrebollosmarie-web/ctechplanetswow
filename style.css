@@ -53,8 +53,8 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  width: 95%;
+  gap: 8px;
+  width: 80%;
   margin: 60px auto 40px auto; 
   overflow-x: auto;
 }
