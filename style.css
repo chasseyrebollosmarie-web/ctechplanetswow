@@ -49,33 +49,21 @@ nav a:hover {
   margin-top:60px;
 }
 
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  width: 80%;
-  margin: 60px auto 40px auto; 
-  overflow-x: auto;
+.buttons a {
+  text-decoration: none;
+  color: #d8e3ff;
+  background: linear-gradient(135deg, #1e90ff, #3a6cf0);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.4);
 }
 
-
-.buttons button {
-  background: rgba(50, 0, 100, 0.6);
-  border: 2px solid #b26cff;
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 0 12px rgba(178, 108, 255, 0.5);
-}
-
-
-.buttons button:hover {
-  background: rgba(100, 0, 200, 0.8);
-  box-shadow: 0 0 20px rgba(178, 108, 255, 0.9);
+.buttons a:hover {
+  background: linear-gradient(135deg, #3a6cf0, #1e90ff);
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.7);
 }
 
 .planet{
@@ -252,7 +240,7 @@ nav a:hover {
   left: 55px;
   width: 160px;
   background: rgba(25, 20, 40, 0.95);
-  border: 1px solid rgba(201, 168, 255, 0.3); 
+  border: 1px solid rgba(201, 168, 255, 0.3); /* match your theme */
   border-radius: 10px;
   padding: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
