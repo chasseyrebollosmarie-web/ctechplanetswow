@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PlanetsCtech</title>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -10,9 +9,24 @@
   href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <nav>
-    <buttons>
+<nav>
+  
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  
+  <div class="popup-menu" id="popupMenu">
+    <a href="game.html">Name the Planets🎮
+</a>
+    <a href="rocket.html">Match The planets🎮
+</a>
+  </div>
+</nav>
+     <buttons>
       <a href="#saturn">Saturn</a></li>
       <a href="#jupiter">Jupiter</a></li>
       <a href="#earth">Earth</a></li>
@@ -32,7 +46,7 @@
   <section id="jupiter" class="planet">
     <h1>🌕 Jupiter</h1>
     <img src="jupiter.jpg" alt="jupiter" class="planet-img">
-  <p>Jupiter is the largest planet big enough to fit 1,300 Earths inside! Its Great Red Spot is a storm that has lasted over 300 years. Its moons, like Europa and Io, Europa may have an ocean under its icy surface. Jupiter’s gravity helps protect Earth by pulling in asteroids.
+  <p>Jupiter is the largest planet. big enough to fit 1,300 Earths inside Its Great Red Spot is a storm that has lasted over 300 years. Its moons, like Europa and Io, Europa may have an ocean under its icy surface. Jupiter’s gravity helps protect Earth by pulling in asteroids.
 </p>
   </section>
 
@@ -50,7 +64,7 @@
   </section>
 
   <section id="mars" class="planet">
-    <h1>Mars</h1>
+    <h1> Mars</h1>
     <img src="mars.jpg" alt="mars" class="planet-img">
   <p>Mars is the Red Planet, known for its iron-rich surface. It has the tallest volcano in the solar system, Olympus Mons, and signs that rivers and lakes existed long ago. Dust storms can cover the whole planet. Scientists hope Mars might have hosted tiny life forms in the past.
 </p>
@@ -62,6 +76,45 @@
   <p>Venus is the brightest planet in the night sky and is often called Earth’s twin because of its similar size. Its surface is hotter than Mercury, and its thick clouds contain sulfuric acid. Venus spins backward slowly and shines brilliantly, making it a dazzling planet to observe.
 </p>
   </section>
+  </div>
 
-</body>
+<script src="game.js"></script>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+
+  const gameBtn = document.getElementById('gameBtn');
+  const gameSection = document.getElementById('game');
+
+  gameBtn.addEventListener('click', () => {
+    document.getElementById('menu').style.display = 'none';
+    gameSection.style.display = 'block';
+    startGame(); 
+  });
+</script>
+  
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('popupMenu');
+  const ham = document.getElementById('hamburger');
+  const open = menu.classList.toggle('show');
+  ham.classList.toggle('open', open);
+}
+
+
+document.addEventListener('click', (e) => {
+  const menu = document.getElementById('popupMenu');
+  const ham = document.getElementById('hamburger');
+  if (!menu || !ham) return;
+  if (!menu.contains(e.target) && !ham.contains(e.target)) {
+    menu.classList.remove('show');
+    ham.classList.remove('open');
+  }
+});
+</script>
+
+</body>,
 </html>
